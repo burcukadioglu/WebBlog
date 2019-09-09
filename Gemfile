@@ -36,6 +36,13 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -47,10 +54,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-group :development do
-  gem 'sqlite3', '~> 1.4
-end
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
